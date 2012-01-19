@@ -1,13 +1,11 @@
 {
-    "name": "File ZIPper",
+    "name": "__MSG_extensionName__",
     "version": "1.0",
-    "description": "Takes files, folders, etc. and compresses them in a ZIP file.",
-    "browser_action": {
-        "default_icon": "zip16.png"
-        },
+    "default_locale": "en_US",
+    "description": "__MSG_extensionDescription__",
     "file_browser_handlers": [{
         "id": "zip",
-        "default_title": "ZIP files",
+        "default_title": "__MSG_buttonToZip__",
         "file_filters": [
             "filesystem:*.*"
             ]
@@ -15,6 +13,7 @@
     "permissions" : [
         "fileBrowserHandler"
         ],
+    "offline_enabled": true,
     "icons": {
         "16": "zip16.png",
         "48": "zip48.png",

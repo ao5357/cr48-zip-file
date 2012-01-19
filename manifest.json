@@ -1,8 +1,14 @@
 {
     "name": "__MSG_extensionName__",
     "version": "1.0",
-    "default_locale": "en_US",
     "description": "__MSG_extensionDescription__",
+    "icons": {
+        "16": "zip16.png",
+        "48": "zip48.png",
+        "128": "zip128.png"
+        },
+    "default_locale": "en_US",
+    "background_page": "background.html",
     "file_browser_handlers": [{
         "id": "zip",
         "default_title": "__MSG_buttonToZip__",
@@ -10,13 +16,9 @@
             "filesystem:*.*"
             ]
         }],
+    "homepage_url": "https://github.com/ao5357/cr48-zip-file",
+    "offline_enabled": true,
     "permissions" : [
         "fileBrowserHandler"
-        ],
-    "offline_enabled": true,
-    "icons": {
-        "16": "zip16.png",
-        "48": "zip48.png",
-        "128": "zip128.png"
-        },
+        ]
 }

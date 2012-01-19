@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html><head><script>
+    chrome.fileBrowserHandler.onExecute.addListener(function(id, details){
+        if(id == 'zip'){
+            var fileEntries = details.entries;
+            console.log(fileEntries);
+            }
+        });     
+</script></head></html>

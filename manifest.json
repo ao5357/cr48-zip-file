@@ -19,6 +19,7 @@
     "homepage_url": "https://github.com/ao5357/cr48-zip-file",
     "offline_enabled": true,
     "permissions" : [
-        "fileBrowserHandler"
+        "fileBrowserHandler",
+        "unlimitedStorage"
         ]
 }

@@ -1,0 +1,23 @@
+{
+    "name": "File ZIPper",
+    "version": "1.0",
+    "description": "Takes files, folders, etc. and compresses them in a ZIP file.",
+    "browser_action": {
+        "default_icon": "icon.png"
+        },
+    "file_browser_handlers": [{
+        "id": "zip",
+        "default_title": "ZIP files",
+        "file_filters": [
+            "filesystem:*.*"
+            ]
+        }],
+    "permissions" : [
+        "fileBrowserHandler"
+        ],
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+        },
+}

@@ -8,10 +8,10 @@ chrome.fileBrowserHandler.onExecute.addListener(function(id, details){
     if(id == 'rename'){
         var fileEntries = details.entries;
         for(var i = 0,entry;entry = fileEntries[i];++i){
-            entry.getParent(function(dirEntry){
-                var newName = prompt("New filename",this.name);
-                this.moveTo(dirEntry.root,newName);
-                });
+            var newName = prompt("New filename",entry.name);
+            var partialPath = entry.fullPath.substr(0,entry.fullPath.length - entry.name.length);
+            console.log(partialPath);
+            entry.moveTo(entry.filesystem.root,partialPath + newName);
             }
         }
     });     

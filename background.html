@@ -8,9 +8,9 @@ chrome.fileBrowserHandler.onExecute.addListener(function(id, details){
     if(id == 'rename'){
         var fileEntries = details.entries;
         for(var i = 0,entry;entry = fileEntries[i];++i){
-            var newName = prompt("New filename",entry.name);
             entry.getParent(function(dirEntry){
-                entry.moveTo(dirEntry.root,newName);
+                var newName = prompt("New filename",this.name);
+                this.moveTo(dirEntry.root,newName);
                 });
             }
         }

@@ -1,11 +1,6 @@
 {
-    "extensionName": {
-        "message": "File ZIPper"
-        },
-    "extensionDescription": {
-        "message": "Takes files, folders, etc. and compresses them in a ZIP file."
-        },
-    "buttonToZip": {
-        "message": "ZIP files"
-        }
+"extensionName": {"message": "File ZIPper"},
+"extensionDescription": {"message": "Takes files, folders, etc. and compresses them in a ZIP file."},
+"buttonToRename": {"message": "Rename"},
+"buttonToZip": {"message": "ZIP files"}
 }

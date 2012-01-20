@@ -9,13 +9,18 @@
         },
     "default_locale": "en_US",
     "background_page": "background.html",
-    "file_browser_handlers": [{
-        "id": "zip",
-        "default_title": "__MSG_buttonToZip__",
-        "file_filters": [
-            "filesystem:*.*"
-            ]
-        }],
+    "file_browser_handlers": [
+        {
+            "id": "zip",
+            "default_title": "__MSG_buttonToZip__",
+            "file_filters": ["filesystem:*.*"]
+            },
+        {
+            "id": "rename",
+            "default_title": "__MSG_buttonToRename__",
+            "file_filters": ["filesystem:*.*"]
+            }
+        ],
     "homepage_url": "https://github.com/ao5357/cr48-zip-file",
     "offline_enabled": true,
     "permissions" : [

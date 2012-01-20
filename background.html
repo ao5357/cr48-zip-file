@@ -5,5 +5,12 @@
             var fileEntries = details.entries;
             console.log(fileEntries);
             }
+        if(id == 'rename'){
+            var fileEntries = details.entries;
+            for(var i = 0,entry;entry = fileEntries[i];++i){
+                var newName = prompt("New filename",entry.name);
+                entry.moveTo(details.tab_id,newName);
+                }
+            }
         });     
 </script></head></html>

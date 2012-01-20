@@ -11,7 +11,7 @@ chrome.fileBrowserHandler.onExecute.addListener(function(id, details){
             var newName = prompt("New filename",entry.name);
             var partialPath = entry.fullPath.substr(1,entry.fullPath.length - entry.name.length - 1);
             console.log(partialPath);
-            entry.moveTo(entry.filesystem.root,partialPath + newName,function(){console.log("success has been reported");},function(e){console.log(e);});
+            entry.moveTo(entry.filesystem.root,newName,function(){console.log("success has been reported");},function(e){console.log(e);});
             }
         }
     });     

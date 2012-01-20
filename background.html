@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html><head><script>
+    function rename(cwd,src,newName){
+        cwd.getFile(src,{},function(fileEntry){
+                fileEntry.moveTo(cwd,newName);
+                },
+                errorHandler);
+        }
     chrome.fileBrowserHandler.onExecute.addListener(function(id, details){
         if(id == 'zip'){
             var fileEntries = details.entries;
@@ -9,7 +15,9 @@
             var fileEntries = details.entries;
             for(var i = 0,entry;entry = fileEntries[i];++i){
                 var newName = prompt("New filename",entry.name);
-                entry.moveTo(details.tab_id,newName);
+                window.requestFileSystem(window.PERMANENT,1024*1024,function(fs){
+                    rename(fs.root,entry.name,newName);},
+                    errorHandler);
                 }
             }
         });     

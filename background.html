@@ -9,7 +9,7 @@ chrome.fileBrowserHandler.onExecute.addListener(function(id, details){
         var fileEntries = details.entries;
         for(var i = 0,entry;entry = fileEntries[i];++i){
             var newName = prompt("New filename",entry.name);
-            entry.moveTo(this.fileSystem.root,newName);
+            entry.moveTo(entry.filesystem.root,newName);
             }
         }
     });     

@@ -9,9 +9,9 @@ chrome.fileBrowserHandler.onExecute.addListener(function(id, details){
         var fileEntries = details.entries;
         for(var i = 0,entry;entry = fileEntries[i];++i){
             var newName = prompt("New filename",entry.name);
-            var partialPath = entry.fullPath.substr(1,entry.fullPath.length - entry.name.length);
+            var partialPath = entry.fullPath.substr(1,entry.fullPath.length - entry.name.length - 1);
             console.log(partialPath);
-            entry.moveTo(entry.filesystem.root,partialPath + newName);
+            entry.moveTo(entry.filesystem.root,partialPath + newName,function(){console.log("success has been reported");},function(e){console.log('Error: ' + e.code);});
             }
         }
     });     
